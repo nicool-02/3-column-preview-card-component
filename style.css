@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --Bright-orange: hsl(31, 77%, 52%); 
+        --Dark-cyan: hsl(184, 100%, 22%); 
+        --Very-dark-cyan: hsl(179, 100%, 13%);
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    p{
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1.5rem;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    h2{
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 4rem;
+        color: hsl(0, 0%, 95%);
+    }
+
+
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .grid-container{
+        display: grid;
+        background-color: yellowgreen;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80rem;
+        height: 50rem;
+        border-radius: 1rem;
+        margin: auto;
+    }
+    
+    .box-one, .box-two, .box-three{
+        display: flex;
+        width: 100%;
+    }
+    
+    .box-one{
+        background-color: var(--Bright-orange);
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    
+    .box-two{
+        background-color: var(--Dark-cyan);
+    }
+    
+    .box-three{
+        background-color: var(--Very-dark-cyan);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    
+    .inside-box{
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+    }
+    
+    .learn-more{
+        font-family: 'Lexend Deca', sans-serif;
+        padding: 1rem 2.5rem;
+        border-radius: 2rem;
+        border: none;
+        outline: none;
+        margin-top: 4rem;
+    }
+    
+    .box-one button{
+        color: var(--Bright-orange);
+    }
+
+    .box-two button{
+        color: var(--Dark-cyan);
+    }
+
+    .box-three button{
+        color: var(--Very-dark-cyan);
+    }
+    
+    .learn-more:hover{
+        cursor: pointer;
+        color: #fff;
+        background-color: transparent;
+        border: 2px solid white;
+    }
+
+
+    /* ----------- MEDIA QUERY SECTION ----------- */
+
+    @media (max-width: 850px){
+
+        .grid-container{
+            grid-template-columns: 1fr;
+            width: auto;
+            height: auto;
+        }
+
+        .box-one,
+        .box-two,
+        .box-three{
+            display: flex;
+            width: 30rem;
+            height: 45rem;
+        }
+
+        .box-one{
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 0;
+        }
+
+        .box-three{
+            border-bottom-right-radius: 1rem;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 1rem;
+        }
+    }
+
